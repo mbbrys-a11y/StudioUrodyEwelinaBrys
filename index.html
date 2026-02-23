@@ -12,147 +12,29 @@
     --light: #f8f5f2;
     --dark: #333;
 }
-
 * { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--light);
-    color: var(--dark);
-    line-height:1.6;
-}
-
-h1,h2,h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight:700;
-}
-
-.container {
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:60px 0;
-}
-
-header {
-    position:fixed;
-    width:100%;
-    background:white;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    z-index:1000;
-}
-
-nav {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 5%;
-}
-
-nav a {
-    text-decoration:none;
-    color:var(--dark);
-    margin-left:20px;
-    font-weight:500;
-}
-
-.hero {
-    height:100vh;
-    background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-
-.hero h1 {
-    font-size:3rem;
-}
-
-.btn {
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 28px;
-    background:var(--primary);
-    color:white;
-    border-radius:30px;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.btn:hover {
-    background:var(--accent);
-}
-
-.section-light {
-    background:white;
-}
-
-.grid {
-    display:grid;
-    gap:30px;
-}
-
-.services {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card {
-    background:var(--light);
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:translateY(-5px);
-}
-
-.gallery {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.gallery img {
-    width:100%;
-    border-radius:10px;
-}
-
-table {
-    width:100%;
-    border-collapse:collapse;
-}
-
-table td {
-    padding:12px 0;
-    border-bottom:1px solid #ddd;
-}
-
-footer {
-    background:white;
-    text-align:center;
-    padding:30px 10px;
-    font-size:0.9rem;
-}
-
-.floating-btn {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:var(--accent);
-    color:white;
-    padding:14px 22px;
-    border-radius:30px;
-    text-decoration:none;
-    box-shadow:0 5px 20px rgba(0,0,0,0.2);
-}
-
-@media(max-width:768px){
-    .hero h1 { font-size:2.2rem; }
-    nav { flex-direction:column; }
-}
+body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
+h1,h2,h3 { font-family: 'Playfair Display', serif; font-weight:700; }
+.container { width:90%; max-width:1100px; margin:auto; padding:60px 0; }
+header { position:fixed; width:100%; background:white; box-shadow:0 2px 8px rgba(0,0,0,0.05); z-index:1000; }
+nav { display:flex; justify-content:space-between; align-items:center; padding:15px 5%; }
+nav a { text-decoration:none; color:var(--dark); margin-left:20px; font-weight:500; }
+.hero { height:100vh; background:url('images/hero.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; color:white; padding:20px; }
+.hero h1 { font-size:3rem; }
+.btn { display:inline-block; margin-top:20px; padding:12px 28px; background:var(--primary); color:white; border-radius:30px; text-decoration:none; transition:0.3s; }
+.btn:hover { background:var(--accent); }
+.section-light { background:white; }
+.grid { display:grid; gap:30px; }
+.services { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.card { background:var(--light); padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.05); transition:0.3s; }
+.card:hover { transform:translateY(-5px); }
+.gallery { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.gallery img { width:100%; border-radius:10px; }
+table { width:100%; border-collapse:collapse; }
+table td { padding:12px 0; border-bottom:1px solid #ddd; }
+footer { background:white; text-align:center; padding:30px 10px; font-size:0.9rem; }
+.floating-btn { position:fixed; bottom:20px; right:20px; background:var(--accent); color:white; padding:14px 22px; border-radius:30px; text-decoration:none; box-shadow:0 5px 20px rgba(0,0,0,0.2); }
+@media(max-width:768px){ .hero h1 { font-size:2.2rem; } nav { flex-direction:column; } }
 </style>
 </head>
 <body>
@@ -184,21 +66,25 @@ footer {
 <h3>Manicure</h3>
 <p>Stylizacja klasyczna i hybrydowa.</p>
 <p><strong>od 80 zł</strong></p>
+<img src="images/manicure.jpg" alt="Manicure">
 </div>
 <div class="card">
 <h3>Zabiegi pielęgnacyjne</h3>
 <p>Indywidualnie dobrane terapie skóry.</p>
 <p><strong>od 150 zł</strong></p>
+<img src="images/zabiegi.jpg" alt="Zabiegi pielęgnacyjne">
 </div>
 <div class="card">
 <h3>Makijaż okolicznościowy</h3>
 <p>Na wieczór, sesję zdjęciową i eventy.</p>
 <p><strong>od 180 zł</strong></p>
+<img src="images/makijaz.jpg" alt="Makijaż okolicznościowy">
 </div>
 <div class="card">
 <h3>Makijaż ślubny</h3>
 <p>Perfekcyjny makijaż na Twój wyjątkowy dzień.</p>
 <p><strong>od 250 zł</strong></p>
+<img src="images/slubny.jpg" alt="Makijaż ślubny">
 </div>
 </div>
 </section>
@@ -206,9 +92,9 @@ footer {
 <section class="container" id="galeria">
 <h2>Galeria</h2>
 <div class="grid gallery">
-<img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=800&q=80">
+<img src="images/galeria1.jpg" alt="Galeria 1">
+<img src="images/galeria2.jpg" alt="Galeria 2">
+<img src="images/galeria3.jpg" alt="Galeria 3">
 </div>
 </section>
 
