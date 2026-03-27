@@ -3,124 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salon Kosmetyczny & Wizaż</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-    --primary: #d8b4a0;
-    --accent: #b08968;
-    --light: #f8f5f2;
-    --dark: #333;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
-h1,h2,h3 { font-family: 'Playfair Display', serif; font-weight:700; }
-.container { width:90%; max-width:1100px; margin:auto; padding:60px 0; }
-header { position:fixed; width:100%; background:white; box-shadow:0 2px 8px rgba(0,0,0,0.05); z-index:1000; }
-nav { display:flex; justify-content:space-between; align-items:center; padding:15px 5%; }
-nav a { text-decoration:none; color:var(--dark); margin-left:20px; font-weight:500; }
-.hero { height:100vh; background:url('images/homepageIMG.png') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; color:white; padding:20px; }
-.hero h1 { font-size:3rem; }
-.btn { display:inline-block; margin-top:20px; padding:12px 28px; background:var(--primary); color:white; border-radius:30px; text-decoration:none; transition:0.3s; }
-.btn:hover { background:var(--accent); }
-.section-light { background:white; }
-.grid { display:grid; gap:30px; }
-.services { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-.card { background:var(--light); padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.05); transition:0.3s; }
-.card:hover { transform:translateY(-5px); }
-.gallery { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-.gallery img { width:100%; border-radius:10px; }
-table { width:100%; border-collapse:collapse; }
-table td { padding:12px 0; border-bottom:1px solid #ddd; }
-footer { background:white; text-align:center; padding:30px 10px; font-size:0.9rem; }
-.floating-btn { position:fixed; bottom:20px; right:20px; background:var(--accent); color:white; padding:14px 22px; border-radius:30px; text-decoration:none; box-shadow:0 5px 20px rgba(0,0,0,0.2); }
-@media(max-width:768px){ .hero h1 { font-size:2.2rem; } nav { flex-direction:column; } }
-</style>
+<title>Studio Urody Ewelina Bryś</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
 
-<header>
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">Studio Urody Ewelina Bryś</div>
+</div>
+
+<!-- SCROLL PROGRESS BAR -->
+<div id="progress-bar"></div>
+
+<!-- NAV -->
 <nav>
-<div><strong>Twoja Nazwa</strong></div>
-<div>
-<a href="#uslugi">Usługi</a>
-<a href="#galeria">Galeria</a>
-<a href="#cennik">Cennik</a>
-<a href="#kontakt">Kontakt</a>
-</div>
+  <img src="images/logo.png" alt="Studio Urody Ewelina Bryś" class="nav-logoDN">
+  <ul>
+    <li><a href="#onas">O nas</a></li>
+    <li><a href="wizaz.html">Wizaż</a></li>
+    <li><a href="kosmetyka.html">Kosmetyka</a></li>
+    <li><a href="cennik.html">Cennik</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><a href="https://booksy.com/pl-pl/156924_studio-urody-ewelina-brys_salon-kosmetyczny_11597_katowice#ba_s=sh_1" class="btn" target="_blank" rel="noopener noreferrer">Umów wizytę</a></li>
+  </ul>
 </nav>
-</header>
 
+<!-- HERO -->
 <section class="hero">
-<div>
-<h1>Profesjonalna Kosmetyka & Wizaż</h1>
-<p>Piękno podkreślone z klasą</p>
-<a href="#kontakt" class="btn">Umów wizytę</a>
-</div>
+  <div class="hero-slider">
+    <div class="slide active" style="background-image:url('images/hero1.jpg')"></div>
+    <div class="slide" style="background-image:url('images/hero2.jpg')"></div>
+    <div class="slide" style="background-image:url('images/hero3.jpg')"></div>
+	<div class="slide" style="background-image:url('images/hero4.jpg')"></div>    
+	<div class="slide" style="background-image:url('images/hero5.jpg')"></div>
+	
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Studio Urody Ewelina Bryś – profesjonalna pielęgnacja i wizaż</h1>
+  </div>
 </section>
 
-<section class="container section-light" id="uslugi">
-<h2>Usługi</h2>
-<div class="grid services">
-<div class="card">
-<h3>Manicure</h3>
-<p>Stylizacja klasyczna i hybrydowa.</p>
-<p><strong>od 80 zł</strong></p>
-<img src="images/manicure.jpg" alt="Manicure">
-</div>
-<div class="card">
-<h3>Zabiegi pielęgnacyjne</h3>
-<p>Indywidualnie dobrane terapie skóry.</p>
-<p><strong>od 150 zł</strong></p>
-<img src="images/zabiegi.jpg" alt="Zabiegi pielęgnacyjne">
-</div>
-<div class="card">
-<h3>Makijaż okolicznościowy</h3>
-<p>Na wieczór, sesję zdjęciową i eventy.</p>
-<p><strong>od 180 zł</strong></p>
-<img src="images/makijaz.jpg" alt="Makijaż okolicznościowy">
-</div>
-<div class="card">
-<h3>Makijaż ślubny</h3>
-<p>Perfekcyjny makijaż na Twój wyjątkowy dzień.</p>
-<p><strong>od 250 zł</strong></p>
-<img src="images/slubny.jpg" alt="Makijaż ślubny">
-</div>
-</div>
+<!-- O NAS -->
+<section id="onas" class="section">
+  <div class="section-inner">
+    <h2>O nas</h2>
+    <p>
+Studio Urody Ewelina Bryś to miejsce stworzone z pasji do piękna i profesjonalnej pielęgnacji. Od początku działalności naszym celem jest zapewnienie usług na najwyższym poziomie, w atmosferze sprzyjającej relaksowi i wyciszeniu.<br><br>
+
+Do każdego klienta podchodzimy indywidualnie, dobierając zabiegi zgodnie z potrzebami skóry oraz oczekiwaniami. Pracujemy na nowoczesnej aparaturze i sprawdzonych, specjalistycznych kosmetykach, dzięki czemu skutecznie pomagamy również w przypadku wymagających problemów skórnych.<br><br>
+
+Ogromną wagę przykładamy do higieny i bezpieczeństwa. Korzystamy z materiałów jednorazowych, a wszystkie narzędzia są sterylizowane i przygotowywane bezpośrednio przed zabiegiem. Dzięki temu każda wizyta jest nie tylko przyjemna, ale przede wszystkim bezpieczna.<br><br>
+    </p>
+  </div>
 </section>
 
-<section class="container" id="galeria">
-<h2>Galeria</h2>
-<div class="grid gallery">
-<img src="images/galeria1.jpg" alt="Galeria 1">
-<img src="images/galeria2.jpg" alt="Galeria 2">
-<img src="images/galeria3.jpg" alt="Galeria 3">
-</div>
+<!-- KONTAKT -->
+<section id="kontakt" class="section contact">
+  <div class="section-inner">
+    <h2>Kontakt</h2>
+    <div class="contact-box">
+      <div class="contact-info">
+        <p><strong>Adres:</strong> ul. Ułańska 7, 40-887 Katowice</p>
+        <p><strong>Telefon:</strong> 791-281-976</p>
+        <p><strong>Godziny otwarcia:</strong><br>Pon–Pt 9:00–20:00<br>Sob 8:00–14:00</p>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2649.476306744913!2d18.96891720048779!3d50.28465530943498!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716cdf6e9292593%3A0x4c49ebe9be9f941c!2sStudio%20Urody%20Ewelina%20Bry%C5%9B!5e0!3m2!1spl!2spl!4v1772003727117!5m2!1spl!2spl"   title="Mapa dojazdu do Studio Urody Ewelina Bryś" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="container section-light" id="cennik">
-<h2>Cennik</h2>
-<table>
-<tr><td>Manicure hybrydowy</td><td>90 zł</td></tr>
-<tr><td>Oczyszczanie twarzy</td><td>180 zł</td></tr>
-<tr><td>Makijaż wieczorowy</td><td>200 zł</td></tr>
-<tr><td>Makijaż ślubny</td><td>300 zł</td></tr>
-</table>
-</section>
-
-<section class="container" id="kontakt">
-<h2>Kontakt</h2>
-<p>Telefon: 123 456 789</p>
-<p>Email: kontakt@twojastrona.pl</p>
-<p>Adres: Twoje Miasto</p>
-</section>
-
+<!-- FOOTER -->
 <footer>
-© 2026 Twoja Nazwa | Wszelkie prawa zastrzeżone
+  <div>© 2026 Studio Urody Ewelina Bryś.</div>
 </footer>
 
-<a href="#kontakt" class="floating-btn">Rezerwacja</a>
+<!-- JS -->
+<script>
+// MENU scroll background
+window.addEventListener("scroll",()=>{
+  document.querySelector("nav").classList.toggle("scrolled",window.scrollY>50);
+});
+
+// HERO slider
+const slides = document.querySelectorAll(".slide");
+let current = 0;
+setInterval(() => {
+  slides[current].classList.remove("active");
+  current = (current+1) % slides.length;
+  slides[current].classList.add("active");
+}, 5000);
+
+// SCROLL PROGRESS BAR
+window.addEventListener('scroll', () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = (scrollTop / scrollHeight) * 100;
+  document.getElementById('progress-bar').style.width = scrolled + '%';
+});
+
+// LOADER
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  const logo = loader.querySelector('.loader-logo');
+
+  // minimalny czas animacji 2 sekundy
+  setTimeout(() => {
+    // fade-out całego loadera
+    loader.style.opacity = '0';
+
+    // po zakończeniu fade-out ukrywamy loader
+    loader.addEventListener('transitionend', () => {
+      loader.style.display = 'none';
+    });
+  }, 1500); // 2s minimalnego wyświetlania
+});
+</script>
 
 </body>
 </html>
-

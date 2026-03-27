@@ -1,0 +1,316 @@
+/* RESET I PODSTAWY */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #faf8f6;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: .3s;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+nav .logo a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav-logoDN {
+  height: 70px;      /* ustawiasz konkretną wysokość logo */
+  width: auto;       /* szerokość dopasowuje się proporcjonalnie */
+  object-fit: contain;
+  margin-right: 20px; /* opcjonalnie odstęp od menu */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 8px 0;
+  letter-spacing: 1px;
+  transition: color .3s;
+}
+
+nav .btn {
+  background: #bfa046;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: background .3s;
+}
+
+nav .btn:hover {
+  background: #a98b3a;
+}
+
+nav.scrolled {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+nav.scrolled a {
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  position: relative;
+}
+
+.hero h1 {
+  position: absolute; /* usuwa z normalnego przepływu */
+  width: 1px;         /* minimalna szerokość */
+  height: 1px;        /* minimalna wysokość */
+  padding: 0;
+  margin: -1px;       /* poza widocznym obszarem */
+  overflow: hidden;   /* ukrywa wszystko */
+  clip: rect(0,0,0,0); /* starsza metoda dla kompatybilności */
+  white-space: nowrap; /* zapobiega zawijaniu */
+  border: 0;
+}
+	
+.hero-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.35);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+/* HERO dla pozostałych stron */
+.hero-secondary {
+  height: 70vh; /* niższy niż na stronie głównej */
+  position: relative;
+  background-size: cover;         /* wypełnia sekcję zachowując proporcje */
+  background-repeat: no-repeat;
+  background-position: center 20%; /* przesunięcie obrazu w pionie */
+  overflow: hidden;                /* nic nie wystaje poza sekcję */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  min-height: 70vh;      /* minimalna wysokość, żeby hero zawsze było widoczne */
+  width: 100%;            /* pełna szerokość */
+}
+}
+
+.hero-secondary .hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* półprzezroczysta nakładka */
+  z-index: 1;
+}
+
+.hero-secondary .hero-content {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+}
+
+/* SEKCJE */
+.section {
+  width: 100%;
+  padding: 140px 20px;
+  background: #faf8f6;
+  position: relative;
+  z-index: 2;
+}
+
+.section-inner {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+}
+
+/* KONTAKT */
+.contact {
+  background: #f3ede8;
+}
+
+.contact iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+/* CENNIK */
+/* Kontener dla cennika */
+.cennik {
+  max-width: 500px;  /* zmieniasz szerokość całego cennika */
+  margin: 0 auto;     /* wyśrodkowanie */
+  padding: 0 20px;
+}
+
+/* Nagłówki h3 w cenniku */
+.cennik h3 {
+  font-size: 1.8rem;       /* rozmiar czcionki */
+  margin-bottom: 20px;     /* odstęp poniżej nagłówka */
+  text-align: center;        /* wyrównanie do lewej lub center */
+  border-bottom: 2px solid #e5dfd8; /* opcjonalnie linia pod nagłówkiem */
+  padding-bottom: 5px;
+}
+
+/* Tabela w cenniku */
+.cennik table {
+  width: 100%;            /* tabela dopasowana do kontenera */
+  border-collapse: collapse;
+}
+
+.cennik td {
+  padding: 10px 0;
+  border-bottom: 1px solid #e5dfd8;
+}
+
+.cennik td:last-child {
+  text-align: right;
+}
+/* FOOTER */
+footer {
+  width: 100%;
+  background: #1f1f1f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+/* PRZYCISKI */
+.btn {
+  background: #c7a17a;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #b38b63;
+}
+
+/* PROGRESS BAR */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #bfa046;
+  width: 0%;
+  z-index: 1500;
+}
+
+/* LOADER */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+.loader-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #bfa046;
+  animation: pulse 2s ease-in-out infinite alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.1); opacity: 0.6; }
+  100% { transform: scale(2); opacity: 0.8; }
+}
