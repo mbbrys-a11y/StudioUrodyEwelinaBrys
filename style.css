@@ -222,7 +222,7 @@ nav.scrolled a {
 /* CENNIK */
 /* Kontener dla cennika */
 .cennik {
-  max-width: 500px;  /* zmieniasz szerokość całego cennika */
+  max-width: 600px;  /* zmieniasz szerokość całego cennika */
   margin: 0 auto;     /* wyśrodkowanie */
   padding: 0 20px;
 }
